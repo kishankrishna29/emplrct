@@ -33,7 +33,7 @@ public void reg(String appname, String hiqlfc, String mbl, String email, String 
 	driver.findElement(By.xpath("//*[@id=\"txtkeyskills\"]")).sendKeys(skil);
 	
 	Thread.sleep(6000);
-	Runtime.getRuntime().exec("D:\\Leoacademy\\Autoit files\\SM_DR_Upload_doc.exe");
+	Runtime.getRuntime().exec("C:\\Users\\testing04\\eclipse-workspace\\HCM\\SM_DR_Upload_doc.exe");
 	Thread.sleep(6000);
 	
 	driver.findElement(By.xpath("gfhhgf")).sendKeys(skil);
