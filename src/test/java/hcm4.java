@@ -37,7 +37,6 @@ public void reg(String appname, String hiqlfc, String mbl, String email, String 
 	Thread.sleep(6000);
 	
 	driver.findElement(By.xpath("gfhhgf")).sendKeys(skil);
-	
 }
 
 @DataProvider
