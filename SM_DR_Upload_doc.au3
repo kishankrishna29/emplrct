@@ -1,3 +1,3 @@
 ControlFocus("Open","","Edit1")
-ControlSetText("Open","","Edit1","D:\Leoacademy\Autoit_repo\file.doc")
+ControlSetText("Open","","Edit1","D:\selenium\file.txt")
 ControlClick("Open","","Button1")

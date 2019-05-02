@@ -6,17 +6,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 public class base4
 {
 	public static WebDriver driver;
 	
-	@BeforeMethod
+	@BeforeTest
 	public void start() throws InterruptedException
 	{
 		
-	System.setProperty("webdriver.chrome.driver","C:\\Users\\testing04\\eclipse-workspace\\HCM\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver","C:\\Users\\cpui04\\git\\emplrct\\chromedriver.exe");
 	
 	//System.setProperty("webdriver.gecko.driver","D:\\pro2\\Healthcare\\src\\main\\java\\com\\browsers\\geckodriver.exe");
 	
@@ -24,7 +26,7 @@ public class base4
 	driver.get("http://192.168.2.245:8181");
 	Actions act = new Actions(driver);
 	WebElement uname = driver.findElement(By.xpath("//*[@id='employeecode']"));
-	act.sendKeys(uname,"27115").build().perform();
+	act.sendKeys(uname,"29519").build().perform();
 	
 	WebElement pwd = driver.findElement(By.xpath("//*[@id='password']"));
 	act.sendKeys(pwd,"Leo@1234").build().perform();
@@ -35,7 +37,7 @@ public class base4
 	}
 	
 	
-	@AfterMethod
+	@AfterTest
 	public void end() throws InterruptedException
 	{
 		Thread.sleep(5000);

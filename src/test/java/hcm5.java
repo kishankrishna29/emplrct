@@ -17,7 +17,7 @@ public class hcm5 extends base4
 	@Test(dataProvider = "login")
 	public void reg(String appname) throws InterruptedException, IOException
 	{
-		Actions act = new Actions(driver);
+//		Actions act = new Actions(driver);
 		driver.get("http://192.168.2.245:8181/shortlistCandidates");
 		Thread.sleep(3000);
 		
@@ -50,7 +50,7 @@ public class hcm5 extends base4
 	}
 	private Object[][] getExcelDat() throws BiffException, IOException
 	{
-			FileInputStream fi= new FileInputStream("C:\\Users\\pms02\\Downloads\\applicant.xls");
+			FileInputStream fi= new FileInputStream("D:\\selenium\\rct files\\applicant_hr.xls");
 			Workbook wb= Workbook.getWorkbook(fi);
 			Sheet sh= wb.getSheet("data");
 			String[][] arexceldada = new String[sh.getRows()][sh.getColumns()];
