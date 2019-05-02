@@ -42,7 +42,7 @@ public class hcm6 extends base4
 		
 		driver.findElement(By.xpath("//*[@id='datetxtid']")).click();
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[4]/td[6]/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[1]/td[5]/a")).click();
 		Thread.sleep(2000);
 		
 //		WebElement ap12=driver.findElement(By.xpath("//*[@id='txttimeid']"));
@@ -82,7 +82,7 @@ public class hcm6 extends base4
 	}
 	private Object[][] getExcelDat() throws BiffException, IOException
 	{
-			FileInputStream fi= new FileInputStream("D:\\selenium\\rct files\\applicant_asn2.xls");
+			FileInputStream fi= new FileInputStream("D:\\selenium\\rct files\\applicant_asn3.xls");
 			Workbook wb= Workbook.getWorkbook(fi);
 			Sheet sh= wb.getSheet("data");
 			String[][] arexceldada = new String[sh.getRows()][sh.getColumns()];

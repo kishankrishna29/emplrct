@@ -2,7 +2,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
@@ -19,6 +18,7 @@ public class hcm7 extends base4
 	public void reg(String appname,String slttxt,String vals) throws InterruptedException, IOException
 	{
 		Actions act = new Actions(driver);
+		
 		driver.get("http://192.168.2.245:8181/interviewer");
 		
 		driver.findElement(By.xpath("//*[@id='interviewlist_filter']/label/input")).sendKeys(appname);
@@ -30,10 +30,13 @@ public class hcm7 extends base4
 		driver.findElement(By.xpath("//*[@id='interviewlist']/tbody/tr/td[9]/input")).click();
 		
 		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//*[@id=\"ofctcid\"]")).sendKeys("10.55");
 
 		Select slt = new Select(driver.findElement(By.xpath("//*[@id='schedulestatusid']")));
 		slt.selectByVisibleText(slttxt);
 		Thread.sleep(2000);
+		
 		driver.findElement(By.xpath("//*[@id='commentid']")).sendKeys(vals);
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@id='schedulestatusid']")).click();
@@ -57,7 +60,7 @@ public class hcm7 extends base4
 	}
 	private Object[][] getExcelDat() throws BiffException, IOException
 	{
-			FileInputStream fi= new FileInputStream("D:\\selenium\\rct files\\applicant_hr.xls");
+			FileInputStream fi= new FileInputStream("D:\\selenium\\rct files\\applicant_wg.xls");
 			Workbook wb= Workbook.getWorkbook(fi);
 			Sheet sh= wb.getSheet("data");
 			String[][] arexceldada = new String[sh.getRows()][sh.getColumns()];

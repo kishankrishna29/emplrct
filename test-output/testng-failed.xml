@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="hcm6">
+      <class name="hcm7">
         <methods>
-          <include name="reg" invocation-numbers="28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 52"/>
+          <include name="reg" invocation-numbers="9 10 11 12 13 14"/>
           <include name="start"/>
           <include name="end"/>
         </methods>
-      </class> <!-- hcm6 -->
+      </class> <!-- hcm7 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

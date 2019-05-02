@@ -19,7 +19,7 @@ public void reg(String appname, String hiqlfc, String mbl, String email, String 
 	Actions act = new Actions(driver);
 	driver.get("http://192.168.2.245:8181/applicant_registration");
 	Thread.sleep(3000);
-	driver.findElement(By.xpath("//*[@id=\"vacanyInfoTblId\"]/tbody/tr[1]/td[1]/input")).click();
+	driver.findElement(By.xpath("//*[@id=\"vacanyInfoTblId\"]/tbody/tr/td[1]/input")).click();
 	driver.findElement(By.xpath("//*[@id=\"btnproceed\"]")).click();
 	Thread.sleep(3000);
 	driver.findElement(By.xpath("//*[@id=\"txtapplicantname\"]")).sendKeys(appname);
